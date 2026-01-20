@@ -193,6 +193,7 @@ export default function Portfolio() {
                       <a
                       href={project.link}
                       className="text-blue-400 hover:text-blue-300 transition-colors inline-flex items-center text-sm"
+                      target="_blank"
                     >
                       Live Demo →
                     </a>
@@ -201,6 +202,7 @@ export default function Portfolio() {
                       <a
                       href={project.github}
                       className="text-purple-400 hover:text-purple-300 transition-colors inline-flex items-center text-sm"
+                      target="_blank"
                     >
                       GitHub →
                     </a>
