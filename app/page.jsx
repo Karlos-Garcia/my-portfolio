@@ -51,15 +51,15 @@ export default function Portfolio() {
       title: 'Inventory Management System',
       description: 'A frontend inventory management system built with modern web technologies. Features include product listing, search functionality, and a clean, intuitive user interface for managing inventory data.',
       tags: ['React', 'Tailwind CSS', 'JavaScript'],
-      link: '#',
-      github: '#'
+      link: 'https://keeper-inventory-management.vercel.app/',
+      github: 'https://github.com/Karlos-Garcia/Keeper-inventory-management'
     },
     {
       title: 'FSL Recognition system',
       description: 'A Filipino Sign Language Recognition system. Features include capturing images, importing images, predicting signs of alphabet as well as numbers, and showing their confidence values ',
       tags: ['Python'],
       link: '',
-      github: '',
+      github: 'https://github.com/Karlos-Garcia/FSL-recognition-project',
     }
   ];
 
@@ -189,18 +189,23 @@ export default function Portfolio() {
                     ))}
                   </div>
                   <div className="flex gap-4">
-                    <a
+                    {project.link && (
+                      <a
                       href={project.link}
                       className="text-blue-400 hover:text-blue-300 transition-colors inline-flex items-center text-sm"
                     >
                       Live Demo →
                     </a>
-                    <a
+                    )}
+                    {project.github && (
+                      <a
                       href={project.github}
                       className="text-purple-400 hover:text-purple-300 transition-colors inline-flex items-center text-sm"
                     >
                       GitHub →
                     </a>
+                    )}
+                    
                   </div>
                 </div>
               </div>
