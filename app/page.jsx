@@ -110,7 +110,7 @@ export default function Portfolio() {
                 Hi, I'm <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">Karlos Louis Angelo A. Garcia</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-400 mb-6">
-                Fresh CS Graduate | Aspiring Web Developer
+                Fresh CS Graduate | Aspiring Cloud Engineer
               </p>
               <p className="text-base md:text-lg text-gray-300 mb-8">
                 Passionate about building beautiful and functional web experiences. Currently studying React and Next.js while bringing creative ideas to life.

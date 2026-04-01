@@ -2,7 +2,7 @@ name: Deploy Static Site to S3 + CloudFront
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
 
 permissions:
   contents: read
@@ -34,10 +34,14 @@ jobs:
           role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
           aws-region: ${{ vars.AWS_REGION }}
       
+      #the option after sync is the folder for the build, in next js, out is build folder
       - name: Sync files to S3
         run: |
           aws s3 sync ./out s3://${{ vars.S3_BUCKET_NAME }} --delete
 
+      #self note: invalidate cache is used to invalidate stored cache in cloudfront edge locations
+      #therefore, when this command is run, when a new visitor from a specific region loads the files
+      #cloudfront immediately fetches the new s3 files to update the display
       - name: Invalidate CloudFront cache
         run: |
           aws cloudfront create-invalidation \
