@@ -32,19 +32,38 @@ export default function Portfolio() {
     setActiveSection(id);
   };
 
-  const skills = [
-    { name: 'HTML', icon: HtmlIcon },
-    { name: 'CSS', icon: CssIcon },
-    { name: 'JavaScript', icon: JavascriptIcon },
-    { name: 'React', icon: ReactIcon },
-    { name: 'Next.js', icon: NextIcon },
-    { name: 'Tailwind CSS', icon: TailwindIcon },
-    { name: 'PHP', icon: PhpIcon },
-    { name: 'Laravel', icon: LaravelIcon },
-    { name: 'MySQL', icon: MySQLIcon },
-    { name: 'Git', icon: GitIcon },
-    { name: 'GitHub', icon: GithubIcon },
+  const skillSections = [
+    {
+      title: "Cloud & DevOps",
+      skills: [
+        "AWS (S3, EC2, IAM, CloudFront, ECR)",
+        "Docker",
+        "GitHub Actions (CI/CD)"
+      ]
+    },
+    {
+      title: "Programming & Scripting",
+      skills: ["JavaScript", "Bash"]
+    },
+    {
+      title: "Web Technologies",
+      skills: [
+        "React",
+        "Next.js",
+        "HTML",
+        "CSS",
+        "Tailwind CSS",
+        "PHP",
+        "Laravel",
+        "MySQL"
+      ]
+    },
+    {
+      title: "Tools",
+      skills: ["Git", "GitHub"]
+    }
   ];
+
 
   const projects = [
     {
@@ -113,7 +132,7 @@ export default function Portfolio() {
                 Fresh CS Graduate | Aspiring Cloud Engineer
               </p>
               <p className="text-base md:text-lg text-gray-300 mb-8">
-                Passionate about building beautiful and functional web experiences. Currently studying React and Next.js while bringing creative ideas to life.
+                I deploy and manage applications using cloud technologies like AWS, Docker, and CI/CD pipelines, with a growing focus on automation and cloud infrastructure.
               </p>
               <button
                 onClick={() => scrollToSection('projects')}
@@ -132,32 +151,49 @@ export default function Portfolio() {
           <h2 className="text-4xl font-bold mb-8 text-center">About Me</h2>
           <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700">
             <p className="text-gray-300 text-lg leading-relaxed mb-6">
-              I'm a recent Computer Science graduate with a passion for web development. My journey started with HTML, CSS, and JavaScript, and has evolved into exploring modern frameworks like React and Next.js.
+              I’m a Computer Science graduate focused on becoming a Cloud Engineer.
             </p>
             <p className="text-gray-300 text-lg leading-relaxed mb-6">
-              I have experience working with both frontend and backend technologies, including PHP, Laravel, and MySQL. While I'm still learning and growing, I'm eager to contribute to meaningful projects and collaborate with talented teams.
+              I have hands-on experience deploying applications using AWS services such as S3, EC2, IAM, and CloudFront, along with CI/CD automation using GitHub Actions.
+            </p>
+            <p className="text-gray-300 text-lg leading-relaxed mb-6">
+              I am continuously improving my skills in Linux environments and Bash scripting for automation tasks. Currently, I’m expanding my knowledge in cloud infrastructure, deployment automation, and scalable system design.
+            </p>
+            <p className="text-gray-300 text-lg leading-relaxed mb-6">
+              I’m eager to contribute to real-world systems and grow in DevOps and cloud engineering.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Skills Section */}
       <section id="skills" className="py-20 px-6 bg-black/30">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Skills & Technologies</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {skills.map((skill, index) => {
-              return (
-                <div
-                key={skill.name}
-                className="animate-fade-in bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-blue-500/50 transition-all hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 text-center"
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-4xl font-bold mb-4">
+            Skills & Technologies
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+            {skillSections.map((section) => (
+              <div
+                key={section.title}
+                className="bg-gray-800/40 border border-gray-700 rounded-2xl p-6 backdrop-blur-sm hover:border-blue-500/40 transition"
               >
-                 <skill.icon className="w-12 h-12 mx-auto mb-3 fill-white" />
-                <h3 className="font-semibold text-gray-200">{skill.name}</h3>
+                <h3 className="text-lg font-semibold mb-4 text-blue-400">
+                  {section.title}
+                </h3>
+
+                <div className="flex flex-wrap gap-2">
+                  {section.skills.map((skill) => (
+                    <span
+                      key={skill}
+                      className="px-3 py-1 text-sm bg-gray-700/60 rounded-md text-gray-200"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
               </div>
-              )
-              
-})}
+            ))}
           </div>
         </div>
       </section>
