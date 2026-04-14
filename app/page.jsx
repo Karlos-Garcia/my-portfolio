@@ -36,7 +36,7 @@ export default function Portfolio() {
     {
       title: "Cloud & DevOps",
       skills: [
-        "AWS (S3, EC2, IAM, CloudFront, ECR)",
+        "AWS (S3, EC2, IAM, CloudFront, ECS Fargate, ECR)",
         "Docker",
         "GitHub Actions (CI/CD)"
       ]
@@ -77,7 +77,7 @@ export default function Portfolio() {
       title: 'FSL Recognition system',
       description: 'A Filipino Sign Language Recognition system. Features include capturing images, importing images, predicting signs of alphabet as well as numbers, and showing their confidence values ',
       tags: ['Python'],
-      link: '',
+      link: 'http://13-211-222-184.nip.io/',
       github: 'https://github.com/Karlos-Garcia/FSL-recognition-project',
     }
   ];
@@ -132,7 +132,7 @@ export default function Portfolio() {
                 Fresh CS Graduate | Aspiring Cloud Engineer
               </p>
               <p className="text-base md:text-lg text-gray-300 mb-8">
-                I deploy and manage applications using cloud technologies like AWS, Docker, and CI/CD pipelines, with a growing focus on automation and cloud infrastructure.
+                I'm a recent Computer Science graduate passionate about cloud technologies and DevOps. I'm currently building hands-on experience with AWS, Docker, and CI/CD pipelines, while focusing on automation and cloud infrastructure.
               </p>
               <button
                 onClick={() => scrollToSection('projects')}
@@ -151,16 +151,16 @@ export default function Portfolio() {
           <h2 className="text-4xl font-bold mb-8 text-center">About Me</h2>
           <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700">
             <p className="text-gray-300 text-lg leading-relaxed mb-6">
-              I’m a Computer Science graduate focused on becoming a Cloud Engineer.
+              I’m a Computer Science graduate with a strong interest in becoming a Cloud Engineer.
             </p>
             <p className="text-gray-300 text-lg leading-relaxed mb-6">
-              I have hands-on experience deploying applications using AWS services such as S3, EC2, IAM, and CloudFront, along with CI/CD automation using GitHub Actions.
+              I’ve gained practical experience deploying applications on AWS using services like S3, EC2, IAM, CloudFront, and ECS Fargate, along with setting up basic CI/CD workflows using GitHub Actions.
             </p>
             <p className="text-gray-300 text-lg leading-relaxed mb-6">
-              I am continuously improving my skills in Linux environments and Bash scripting for automation tasks. Currently, I’m expanding my knowledge in cloud infrastructure, deployment automation, and scalable system design.
+              I’m actively improving my skills in Linux and Bash scripting for automation. Right now, I’m deepening my understanding of cloud infrastructure, deployment processes, and scalable system design.
             </p>
             <p className="text-gray-300 text-lg leading-relaxed mb-6">
-              I’m eager to contribute to real-world systems and grow in DevOps and cloud engineering.
+              I’m excited to contribute to real projects, learn from experienced teams, and grow in the DevOps and cloud engineering space.
             </p>
           </div>
         </div>
